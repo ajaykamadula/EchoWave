@@ -499,38 +499,69 @@ export default function VideoMeetComponent() {
   return (
     <div>
       {askForUsername === true ? (
-        <div className="flex items-center justify-center min-h-screen bg-gray-100">
-          <div className="bg-white rounded-2xl shadow-lg p-8 w-full max-w-md space-y-6">
-            <h2 className="text-2xl font-semibold text-gray-800 text-center">
-              Enter the Lobby
-            </h2>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            height: "100vh",
+            background: "#f5f7fa",
+            fontFamily: "Arial, sans-serif",
+            padding: "20px",
+          }}
+        >
+          <h2 style={{ marginBottom: "20px", color: "#333" }}>
+            Enter into Lobby
+          </h2>
 
-            <TextField
-              fullWidth
-              id="username"
-              label="Username"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-              variant="outlined"
-            />
+          <TextField
+            id="outlined-basic"
+            label="Username"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+            variant="outlined"
+            style={{
+              marginBottom: "20px",
+              width: "250px",
+              backgroundColor: "white",
+            }}
+          />
 
-            <Button
-              variant="contained"
-              fullWidth
-              onClick={connect}
-              style={{ padding: "12px 0", fontSize: "16px" }}
-            >
-              Connect
-            </Button>
+          <Button
+            variant="contained"
+            onClick={connect}
+            style={{
+              marginBottom: "30px",
+              backgroundColor: "#1976d2",
+              color: "white",
+              padding: "10px 30px",
+              fontWeight: "bold",
+              fontSize: "16px",
+            }}
+          >
+            Connect
+          </Button>
 
-            <div className="w-full aspect-video bg-black rounded-lg overflow-hidden shadow-md">
-              <video
-                ref={localVideoRef}
-                autoPlay
-                muted
-                className="w-full h-full object-cover rounded-lg"
-              ></video>
-            </div>
+          <div
+            style={{
+              border: "2px solid #ddd",
+              borderRadius: "10px",
+              overflow: "hidden",
+              backgroundColor: "#000",
+            }}
+          >
+            <video
+              ref={localVideoref}
+              autoPlay
+              muted
+              style={{
+                width: "300px",
+                height: "200px",
+                objectFit: "cover",
+                borderRadius: "10px",
+              }}
+            ></video>
           </div>
         </div>
       ) : (
