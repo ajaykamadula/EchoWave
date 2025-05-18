@@ -1,0 +1,210 @@
+.landingPageContainer {
+  width: 100vw;
+  height: 100vh;
+  background: url("/public/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+.landingPageContainer nav {
+  padding-inline: 1.2rem;
+  padding-block: 1.6rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.landingPageContainer nav h2 {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+.landingPageContainer nav .navlist {
+  display: flex;
+  gap: 1.6rem;
+  cursor: pointer;
+
+}
+
+.landingMainContainer {
+  display: flex;
+  justify-content: space-between;
+  padding-inline: 3rem;
+  height: 80vh;
+  align-items: center;
+}
+
+.landingMainContainer>div:nth-child(1) {
+  font-size: 2.2rem;
+}
+
+.landingMainContainer>div:nth-child(1) div[role='button'] {
+  background: #D97500;
+  width: fit-content;
+  padding: 1rem;
+  border-radius: 20px;
+  margin-top: 1.9rem;
+}
+
+.landingMainContainer>div:nth-child(1) div[role='button'] a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.7rem;
+}
+
+.landingMainContainer>div:nth-child(2) img {
+  height: 70vh;
+  width: auto;
+}
+
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 20px;
+  text-align: center;
+
+}
+.meetContainer {
+  display: flex;
+  padding-inline: 20px;
+  height: 80vh;
+  gap: 10vw;
+  justify-content: center;
+}
+
+
+
+.leftPanel {
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+}
+
+.rightPanel {
+  display: flex;
+  align-items: center;
+}
+
+.rightPanel > img {
+  width: 30vw;
+  height: auto;
+  border-radius: 20px;
+}
+/* Navbar */
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px;
+  background-color: #282c34;
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navBarLeft h2 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.8rem;
+  letter-spacing: 1.2px;
+}
+
+.navBarRight {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.navText {
+  margin: 0 8px 0 0;
+  font-weight: 500;
+  font-size: 1rem;
+  color: #ddd;
+}
+
+/* Main container */
+.meetContainer {
+  display: flex;
+  height: calc(100vh - 64px);
+  padding: 40px 60px;
+  gap: 60px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  box-sizing: border-box;
+}
+
+/* Left panel styling */
+.leftPanel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.headline {
+  font-size: 2.1rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #222;
+  line-height: 1.3;
+}
+
+.joinInputGroup {
+  display: flex;
+  gap: 16px;
+  max-width: 400px;
+}
+
+.joinInputGroup .MuiTextField-root {
+  flex-grow: 1;
+}
+
+/* Right panel styling */
+.rightPanel {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Responsive tweaks */
+@media (max-width: 900px) {
+  .meetContainer {
+    flex-direction: column;
+    padding: 30px 20px;
+    height: auto;
+    gap: 40px;
+  }
+
+  .rightPanel {
+    order: -1;
+    margin-bottom: 20px;
+  }
+
+  .headline {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  .joinInputGroup {
+    max-width: 100%;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .joinInputGroup .MuiTextField-root,
+  .joinInputGroup .MuiButton-root {
+    width: 100%;
+  }
+}
