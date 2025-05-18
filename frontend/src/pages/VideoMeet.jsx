@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import TextField from "@mui/material/TextField";
 import { Badge, Button, IconButton } from "@mui/material";
 import { io } from "socket.io-client";
-import styles from "../styles/VideoComponent.module.css";
+import styles from "../styles/videoComponent.module.css";
 import VideocamIcon from "@mui/icons-material/Videocam";
 import VideocamOffIcon from "@mui/icons-material/VideocamOff";
 import CallEndIcon from "@mui/icons-material/CallEnd";
