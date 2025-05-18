@@ -156,3 +156,27 @@
 .chattingArea button:hover {
     background-color: #0056b3;
 }
+/* chat.module.css */
+.chatRoom {
+  position: absolute;
+  height: 90vh;
+  right: 0;
+  background: #ffffff;
+  border-radius: 12px;
+  width: 30vw;
+  padding: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.chatContainer {
+  position: relative;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.chattingArea {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
