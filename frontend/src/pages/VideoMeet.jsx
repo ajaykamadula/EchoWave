@@ -11,10 +11,11 @@ import MicOffIcon from "@mui/icons-material/MicOff";
 import ScreenShareIcon from "@mui/icons-material/ScreenShare";
 import StopScreenShareIcon from "@mui/icons-material/StopScreenShare";
 import { useNavigate } from "react-router-dom";
+import server from "../environment";
 
 import ChatIcon from "@mui/icons-material/Chat";
 
-const server_url = "http://localhost:8000";
+const server_url = server;
 
 const connections = {};
 const iceBuffers = {}; // maps socketId → [candidate1, candidate2, …]
